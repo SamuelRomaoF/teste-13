@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-VariableFont.woff2') format('woff2');
+  /* Removido: src: url('/fonts/Inter-VariableFont.woff2') format('woff2'); */
   font-weight: 100 900;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins-VariableFont.woff2') format('woff2');
+  /* Removido: src: url('/fonts/Poppins-VariableFont.woff2') format('woff2'); */
   font-weight: 100 900;
   font-display: swap;
 }
