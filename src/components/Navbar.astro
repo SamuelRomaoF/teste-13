@@ -10,7 +10,7 @@ const navItems = [
   <div class="container flex items-center justify-between h-16">
     <!-- Logo -->
     <a href="/" class="flex items-center space-x-2">
-      <img src="/assets/images/logo-small.webp" alt="Fire Domínios" class="h-10 w-10 object-contain" loading="lazy" />
+      <img src="/assets/images/logo-small.webp" alt="Logotipo da Fire Domínios" class="h-10 w-10 object-contain" loading="lazy" />
       <span class="font-bold text-lg">Fire Domínios</span>
     </a>
 
@@ -24,7 +24,7 @@ const navItems = [
         )
       ))}
       <li>
-        <a href="/contato" class="bg-fire-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition">Contato</a>
+        <a href="/contato" class="bg-fire-dark text-white px-5 py-2 rounded-full font-semibold hover:opacity-95 transition">Contato</a>
       </li>
     </ul>
 
@@ -42,7 +42,7 @@ const navItems = [
             ? <li><a href={item.path} target="_blank" rel="noopener" class="block py-2 text-gray-700 hover:text-fire-primary font-medium">{item.name}</a></li>
             : <li><a href={item.path} class="block py-2 text-gray-700 hover:text-fire-primary font-medium">{item.name}</a></li>
         ))}
-        <li><a href="/contato" class="block bg-fire-primary text-white px-5 py-3 rounded-full font-semibold text-center">Contato</a></li>
+        <li><a href="/contato" class="block bg-fire-dark text-white px-5 py-3 rounded-full font-semibold text-center">Contato</a></li>
       </ul>
     </div>
   </div>

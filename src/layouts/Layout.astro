@@ -9,6 +9,9 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- SEO básicos -->
+    <title>{Astro.props.title ?? 'Fire Domínios | Agência Digital, Criação de Sites e Marketing'}</title>
+    <meta name="description" content={Astro.props.description ?? 'A Fire Domínios cria sites de alta performance, landing pages e soluções digitais para acelerar o crescimento da sua empresa.'} />
     <slot name="head" />
     <!-- Favicon: logo oficial Fire Domínios -->
     <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/logo-small.webp" />
