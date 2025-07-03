@@ -3,17 +3,14 @@ const year = new Date().getFullYear();
 ---
 <footer class="bg-neutral-900 text-neutral-200 pt-16 pb-8">
   <div class="container grid gap-10 md:grid-cols-4">
-    <!-- Logo + descrição -->
-    <div class="space-y-4 md:col-span-2">
+    <section class="space-y-4 md:col-span-2">
       <div class="flex items-center space-x-3">
-        <img src="/assets/images/logo-small.webp" alt="Fire Domínios" class="h-10 w-10 object-contain" loading="lazy" />
+        <img src="/assets/images/logo-small.webp" alt="Logotipo da Fire Domínios" class="h-10 w-10 object-contain" loading="lazy" />
         <span class="text-xl font-bold">Fire Domínios</span>
       </div>
       <p class="text-sm opacity-80 max-w-xs">Agência digital especialista em criar experiências que convertem visitantes em clientes e impulsionam resultados.</p>
-    </div>
-
-    <!-- Navegação -->
-    <div>
+    </section>
+    <nav aria-label="Links principais">
       <h4 class="font-semibold mb-4">Links</h4>
       <ul class="space-y-2 text-sm">
         <li><a href="/" class="hover:text-white">Home</a></li>
@@ -22,12 +19,10 @@ const year = new Date().getFullYear();
         <li><a href="/sobre" class="hover:text-white">Sobre</a></li>
         <li><a href="/contato" class="hover:text-white">Contato</a></li>
       </ul>
-    </div>
-
-    <!-- Contato rápido -->
-    <div>
+    </nav>
+    <address>
       <h4 class="font-semibold mb-4">Contato</h4>
-      <ul class="space-y-2 text-sm">
+      <ul class="space-y-2 text-sm not-italic">
         <li>Email: suporte@firedominios.com</li>
         <li>WhatsApp: (11) 99162-7189</li>
         <li>São Paulo – SP</li>
@@ -49,9 +44,8 @@ const year = new Date().getFullYear();
           </svg>
         </a>
       </div>
-    </div>
+    </address>
   </div>
-
   <div class="border-t border-neutral-700 mt-12 pt-6 text-center text-xs opacity-70">
     © {year} Fire Domínios. Todos os direitos reservados.
   </div>
