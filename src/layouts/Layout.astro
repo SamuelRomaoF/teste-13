@@ -15,11 +15,6 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
     <slot name="head" />
     <!-- Favicon: logo oficial Fire Domínios -->
     <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/logo-small.webp" />
-    <!-- Preload CSS global -->
-    <link rel="preload" href="/styles/global.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/styles/global.css"></noscript>
-    <link rel="preload" href="/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Poppins-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
     <style>
       html, body {
         overflow-x: hidden;
