@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import FinalCTASection from '../components/FinalCTASection.astro';
+import ScrollRevealSection from '../components/ScrollRevealSection.astro';
+---
+<Layout>
+  <ScrollRevealSection direction="up" threshold={0.15}>
+    <ServicesSection />
+  </ScrollRevealSection>
+  
+  <ScrollRevealSection direction="fade" threshold={0.15}>
+    <BenefitsSection />
+  </ScrollRevealSection>
+  
+  <ScrollRevealSection direction="up" threshold={0.15}>
+    <FinalCTASection />
+  </ScrollRevealSection>
+</Layout> 

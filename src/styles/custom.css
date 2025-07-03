@@ -1,0 +1,307 @@
+/* Fonte já carregada em HTML para LCP rápido */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Carregar crítico primeiro - garante sincronização com CSS inline */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter;
+    background: linear-gradient(135deg, #FFFAF7 0%, #FFF7F1 25%, #FFEDE1 50%, #FFFAF7 75%, #FFF7F1 100%);
+    background-attachment: fixed;
+  }
+  
+  /* Content-visibility para melhorar renderização - permite ao navegador pular renderização de elementos fora da tela */
+  .skip-offscreen {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px; /* Valor aproximado para reservar espaço */
+  }
+  
+  /* Otimização de renderização para LCP */
+  img, video {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* LCP critical elements */
+  .lcp-optimized {
+    contain: layout style paint;
+    will-change: auto;
+  }
+
+  /* Priorização de LCP - texto Fire Domínios */
+  .navbar-logo-text {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    background: linear-gradient(135deg, #f54e01 0%, #e53b01 50%, #feb800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    transform: translateZ(0); /* Força aceleração por hardware */
+    will-change: transform;  /* Avisa ao navegador que esse elemento vai mudar */
+  }
+  @media (min-width: 640px) {
+    .navbar-logo-text {
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .navbar-logo-text {
+      font-size: 1.75rem;
+    }
+  }
+  
+  /* Performance improvements */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Font loading otimização */
+  .font-loading {
+    font-display: swap;
+    visibility: visible;
+  }
+  
+  /* Accessibility improvements */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-display: swap;
+  }
+  
+  .font-poppins {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-display: swap;
+  }
+  
+  /* Gradientes Fire otimizados para performance */
+  .fire-gradient {
+    background: linear-gradient(135deg, #f54e01 0%, #e53b01 50%, #feb800 100%);
+  }
+  
+  .fire-gradient-reverse {
+    background: linear-gradient(135deg, #feb800 0%, #e53b01 50%, #f54e01 100%);
+  }
+  
+  .fire-gradient-soft {
+    background: linear-gradient(135deg, 
+      rgba(245, 78, 1, 0.08) 0%, 
+      rgba(229, 59, 1, 0.06) 50%, 
+      rgba(254, 184, 0, 0.04) 100%);
+  }
+  
+  .fire-text-gradient {
+    background: linear-gradient(135deg, #f54e01 0%, #e53b01 50%, #feb800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .fire-text-glow {
+    background: linear-gradient(135deg, #f54e01 0%, #feb800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(245, 78, 1, 0.3);
+  }
+  
+  /* Animações otimizadas - apenas essenciais */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+    will-change: transform;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    will-change: transform, opacity;
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(245, 78, 1, 0.15);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 25px rgba(245, 78, 1, 0.4), 0 0 50px rgba(245, 78, 1, 0.2);
+    transform: scale(1.03);
+  }
+
+  .particle-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .particle-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(245, 78, 1, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(229, 59, 1, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(254, 184, 0, 0.05) 0%, transparent 50%);
+    animation: particleFloat 25s ease-in-out infinite;
+  }
+
+  .glass-morphism {
+    backdrop-filter: blur(16px) saturate(150%);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(245, 78, 1, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(12px) saturate(150%);
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(245, 78, 1, 0.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 6px 15px rgba(245, 78, 1, 0.08);
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes essenciais apenas */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(0.5deg); }
+  50% { transform: translateY(-15px) rotate(0deg); }
+  75% { transform: translateY(-8px) rotate(-0.5deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+  33% { transform: translate(20px, -20px) rotate(90deg); }
+  66% { transform: translate(-15px, 15px) rotate(180deg); }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .hover-lift:hover,
+  .hover-glow:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .animate-float {
+    animation-name: none;
+  }
+}
+
+/* Print optimizations */
+@media print {
+  .fire-gradient,
+  .fire-gradient-reverse {
+    background: none;
+    color: black;
+    box-shadow: none;
+  }
+  
+  .animate-float,
+  .animate-fade-in-up {
+    animation: none;
+  }
+}

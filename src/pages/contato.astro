@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactHero from '../components/ContactHero.astro';
+import ContactForm from '../components/ContactForm.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+import ContactFAQ from '../components/ContactFAQ.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import ScrollRevealSection from '../components/ScrollRevealSection.astro';
+---
+<Layout>
+  <ContactHero />
+  
+  <ScrollRevealSection direction="up" threshold={0.15}>
+    <ContactForm />
+  </ScrollRevealSection>
+  
+  <ScrollRevealSection direction="fade" threshold={0.15}>
+    <ContactInfo />
+  </ScrollRevealSection>
+  
+  <ScrollRevealSection direction="up" threshold={0.15}>
+    <ContactFAQ />
+  </ScrollRevealSection>
+  
+  <ScrollRevealSection direction="fade" threshold={0.15}>
+    <ContactCTA />
+  </ScrollRevealSection>
+</Layout> 

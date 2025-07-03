@@ -1,0 +1,72 @@
+---
+const navItems = [
+  { name: 'Home', path: '/' },
+  { name: 'Serviços', path: '/servicos' },
+  { name: 'Portfólio', path: 'https://portifólio.firedominios.com', external: true },
+  { name: 'Sobre', path: '/sobre' },
+];
+---
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
+  <div class="container flex items-center justify-between h-16">
+    <!-- Logo -->
+    <a href="/" class="flex items-center space-x-2">
+      <img src="/assets/images/logo-small.webp" alt="Fire Domínios" class="h-10 w-10 object-contain" loading="lazy" />
+      <span class="font-bold text-lg">Fire Domínios</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex items-center space-x-6">
+      {navItems.map((item) => (
+        item.external ? (
+          <li><a href={item.path} target="_blank" rel="noopener" class="text-gray-700 hover:text-fire-primary font-medium">{item.name}</a></li>
+        ) : (
+          <li><a href={item.path} class="text-gray-700 hover:text-fire-primary font-medium">{item.name}</a></li>
+        )
+      ))}
+      <li>
+        <a href="/contato" class="bg-fire-primary text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition">Contato</a>
+      </li>
+    </ul>
+
+    <!-- Mobile menu button -->
+    <button id="menuToggle" type="button" class="md:hidden p-2 text-gray-700" aria-label="Abrir menu">
+      <!-- ícone hamburguer simples -->
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    
+    <!-- Mobile Menu (agora dentro do nav para garantir que ele seja fixo) -->
+    <div id="mobileMenu" class="md:hidden fixed top-16 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg rounded-b-lg z-40 hidden">
+      <ul class="flex flex-col space-y-4 py-4 px-6">
+        {navItems.map((item) => (
+          item.external
+            ? <li><a href={item.path} target="_blank" rel="noopener" class="block py-2 text-gray-700 hover:text-fire-primary font-medium">{item.name}</a></li>
+            : <li><a href={item.path} class="block py-2 text-gray-700 hover:text-fire-primary font-medium">{item.name}</a></li>
+        ))}
+        <li><a href="/contato" class="block bg-fire-primary text-white px-5 py-3 rounded-full font-semibold text-center">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Executar o script imediatamente, sem esperar pelo DOMContentLoaded
+  const btn = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  if (btn && mobileMenu) {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // Alterna a classe "hidden" para mostrar/ocultar o menu
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Fecha o menu quando clicar em um link
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+</script> 

@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import LazyFooter from '../components/LazyFooter.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+---
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <slot name="head" />
+    <!-- Favicon: logo oficial Fire Domínios -->
+    <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/logo-small.webp" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col font-inter text-gray-900 bg-gradient-to-b from-[#FFFAF7] via-[#FFF7F1] to-[#FFEDE1] bg-fixed">
+    <Navbar />
+    <main class="flex-grow pt-16">
+      <slot />
+    </main>
+    <LazyFooter />
+    <WhatsAppFloat />
+  </body>
+</html> 

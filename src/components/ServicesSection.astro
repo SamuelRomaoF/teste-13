@@ -1,0 +1,51 @@
+---
+const services = [
+  {
+    icon: '⚡',
+    title: 'Landing Pages de Alto Impacto',
+    description: 'Páginas que convertem visitantes em clientes com design irresistível e estratégia comprovada',
+    highlight: 'Aumento de 400% nas conversões',
+    color: 'from-fire-primary to-fire-secondary',
+  },
+  {
+    icon: '🎯',
+    title: 'Sites WordPress Profissionais',
+    description: 'Sites completos e otimizados que posicionam sua marca como líder no mercado',
+    highlight: 'Entrega em até 5 dias',
+    color: 'from-fire-secondary to-fire-accent',
+  },
+  {
+    icon: '🚀',
+    title: 'Desenvolvimento Exclusivo',
+    description: 'Soluções únicas e personalizadas que fazem sua empresa se destacar da concorrência',
+    highlight: '100% sob medida',
+    color: 'from-fire-accent to-fire-primary',
+  },
+];
+---
+<section class="py-24 relative overflow-hidden bg-gradient-to-br from-orange-50 to-white">
+  <!-- Sutil overlay laranja para transição com gradiente Fire -->
+  <div class="absolute inset-0 bg-gradient-to-r from-fire-primary/5 to-fire-accent/5"></div>
+  <div class="container relative z-10">
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center bg-fire-gradient-soft px-4 py-1 rounded-full text-sm font-semibold text-fire-primary">Serviços Premium</span>
+      <h2 class="mt-6 text-4xl md:text-6xl font-bold font-poppins">Mostre ao mundo o seu melhor — <span class="fire-text-gradient">crie seu site com a Fire Domínios!</span></h2>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      {services.map((service) => (
+        <div class="rounded-2xl overflow-hidden shadow-2xl hover-lift bg-white flex flex-col">
+          <div class={`p-8 text-white bg-gradient-to-br ${service.color}`}>
+            <div class="w-20 h-20 flex items-center justify-center bg-white/20 rounded-2xl text-4xl">{service.icon}</div>
+            <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mt-6">{service.highlight}</div>
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <h3 class="text-2xl font-bold font-poppins mb-4">{service.title}</h3>
+            <p class="text-gray-600 flex-grow">{service.description}</p>
+            <a href="/contato" class="mt-8 inline-flex items-center justify-center bg-fire-primary text-white px-6 py-4 rounded-full font-semibold hover:opacity-90 transition">Quero Este Serviço →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section> 

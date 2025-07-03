@@ -1,0 +1,35 @@
+---
+const team = [
+  {
+    name: 'Mateus Elias',
+    role: 'CEO & Founder',
+    desc: 'Visionário focado em transformar desafios de negócio em sucesso digital.',
+  },
+  {
+    name: 'Samuel Romão',
+    role: 'Head de Desenvolvimento',
+    desc: 'Especialista em desenvolvimento web focado em performance e segurança.',
+  },
+  {
+    name: 'Lucas Bernardo',
+    role: 'Creative Director',
+    desc: 'Designer criativo que desenvolve identidades visuais marcantes.',
+  },
+];
+---
+<section class="py-24 bg-gray-50">
+  <div class="container text-center mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold font-poppins mb-4">Nossa <span class="fire-text-gradient">Equipe</span></h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Os visionários que estão construindo o futuro da presença digital</p>
+  </div>
+  <div class="container grid gap-8 md:grid-cols-3">
+    {team.map((person) => (
+      <div class="bg-white shadow-lg rounded-2xl p-8 hover-lift transition flex flex-col items-center text-center">
+        <div class="w-16 h-16 fire-gradient rounded-full flex items-center justify-center text-white text-3xl mb-6">👥</div>
+        <h3 class="font-bold text-lg font-poppins mb-1">{person.name}</h3>
+        <span class="text-fire-primary font-semibold text-sm mb-4">{person.role}</span>
+        <p class="text-gray-600 text-sm">{person.desc}</p>
+      </div>
+    ))}
+  </div>
+</section> 

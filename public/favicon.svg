@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="none">
+    <!-- Gradiente laranja / amarelo -->
+    <defs>
+        <linearGradient id="fireGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FF7A00" />
+            <stop offset="100%" stop-color="#FFC400" />
+        </linearGradient>
+    </defs>
+
+    <!-- Spark estilizado (6 pontas) -->
+    <polygon fill="url(#fireGrad)"
+        points="12 2 13.8 8 20 8 15 11.5 17 18 12 14.5 7 18 9 11.5 4 8 10.2 8" />
+</svg>

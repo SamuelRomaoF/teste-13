@@ -1,0 +1,37 @@
+---
+const faqs = [
+  {
+    q: 'Qual o prazo de entrega?',
+    a: 'Landing pages em 3-5 dias, sites WordPress em 7-14 dias.'
+  },
+  {
+    q: 'Vocês oferecem suporte pós-entrega?',
+    a: 'Sim! 30 dias gratuitos e planos de manutenção contínua.'
+  },
+  {
+    q: 'Como funciona o processo de pagamento?',
+    a: '50% no início e 50% na entrega. PIX, cartão ou boleto.'
+  },
+  {
+    q: 'Vocês fazem redesign de sites existentes?',
+    a: 'Claro! Modernizamos e otimizamos sites para melhor performance.'
+  }
+];
+---
+<section class="py-24 bg-gray-50">
+  <div class="container max-w-4xl">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold font-poppins mb-4">Perguntas <span class="fire-text-gradient">Frequentes</span></h2>
+      <p class="text-lg text-gray-600">Tire suas dúvidas mais comuns sobre nossos serviços</p>
+    </div>
+
+    <div class="space-y-6">
+      {faqs.map((item) => (
+        <div class="bg-white shadow-lg rounded-xl p-6 hover-lift transition">
+          <h3 class="font-bold text-lg mb-2 font-poppins">{item.q}</h3>
+          <p class="text-gray-600">{item.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section> 

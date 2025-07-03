@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EquipeSection from '../components/EquipeSection.astro';
+import FinalCTASection from '../components/FinalCTASection.astro';
+import ScrollRevealSection from '../components/ScrollRevealSection.astro';
+---
+<Layout>
+  <!-- Hero Section -->
+  <section class="relative py-20 fire-gradient text-white">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold font-poppins mb-6">
+        Sobre a <span class="text-yellow-300">Fire Domínios</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+        Uma nova era na criação de experiências digitais extraordinárias começa agora em 2025
+      </p>
+    </div>
+  </section>
+
+  <!-- Nossa História + Missão Card -->
+  <ScrollRevealSection direction="up" threshold={0.15}>
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold font-poppins mb-6">
+              Nossa <span class="fire-text-gradient">História</span>
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              A Fire Domínios nasce em 2025 com uma visão revolucionária: toda empresa merece uma presença digital que não apenas impressiona, mas que transforma visitantes em clientes fiéis e impulsiona resultados reais.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              Começamos nossa jornada como uma agência digital jovem e ambiciosa, com uma equipe apaixonada por tecnologia e design. Nossa abordagem inovadora combina as mais modernas tecnologias web com estratégias comprovadas de conversão.
+            </p>
+            <p class="text-lg text-gray-600">
+              Nosso diferencial está na dedicação total ao sucesso de cada cliente. Cada projeto é tratado como uma oportunidade única de criar algo extraordinário que gere impacto real no mercado.
+            </p>
+          </div>
+
+          <div class="fire-gradient rounded-2xl p-8 text-white text-center transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+            <h3 class="text-2xl font-bold mb-6">Nossa Missão</h3>
+            <p class="text-lg opacity-90 mb-6">
+              Transformar ideias em experiências digitais que convertem, impressionam e geram resultados extraordinários
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <div class="text-3xl font-bold mb-2">2025</div>
+                <div class="text-sm opacity-90">Ano de Fundação</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold mb-2">100%</div>
+                <div class="text-sm opacity-90">Dedicação</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold mb-2">∞</div>
+                <div class="text-sm opacity-90">Potencial</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold mb-2">24/7</div>
+                <div class="text-sm opacity-90">Comprometimento</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ScrollRevealSection>
+
+  <!-- Nossos Valores -->
+  <ScrollRevealSection direction="fade" threshold={0.15}>
+    <section class="py-20 bg-gradient-to-br from-orange-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold font-poppins mb-4">
+            Nossos <span class="fire-text-gradient">Valores</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Os pilares que nos guiam desde o primeiro dia de nossa jornada
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Valor 1 -->
+          <div class="hover-lift border-0 shadow-lg text-center bg-white rounded-2xl p-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 fire-gradient rounded-full mb-4 text-white text-2xl">
+              🚀
+            </div>
+            <h3 class="text-xl font-bold mb-3 font-poppins">Inovação</h3>
+            <p class="text-gray-600">
+              Utilizamos as tecnologias mais modernas e tendências atuais para criar soluções de impacto
+            </p>
+          </div>
+          <!-- Valor 2 -->
+          <div class="hover-lift border-0 shadow-lg text-center bg-white rounded-2xl p-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 fire-gradient rounded-full mb-4 text-white text-2xl">
+              ⚡
+            </div>
+            <h3 class="text-xl font-bold mb-3 font-poppins">Paixão</h3>
+            <p class="text-gray-600">
+              Começamos nossa jornada com energia e determinação para revolucionar a presença digital
+            </p>
+          </div>
+          <!-- Valor 3 -->
+          <div class="hover-lift border-0 shadow-lg text-center bg-white rounded-2xl p-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 fire-gradient rounded-full mb-4 text-white text-2xl">
+              🎯
+            </div>
+            <h3 class="text-xl font-bold mb-3 font-poppins">Foco</h3>
+            <p class="text-gray-600">
+              Nossa missão é clara: entregar resultados que transformem negócios desde o primeiro projeto
+            </p>
+          </div>
+          <!-- Valor 4 -->
+          <div class="hover-lift border-0 shadow-lg text-center bg-white rounded-2xl p-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 fire-gradient rounded-full mb-4 text-white text-2xl">
+              🤝
+            </div>
+            <h3 class="text-xl font-bold mb-3 font-poppins">Parceria</h3>
+            <p class="text-gray-600">
+              Construímos relacionamentos duradouros, sendo verdadeiros parceiros do seu crescimento
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ScrollRevealSection>
+
+  <ScrollRevealSection direction="left" threshold={0.15}>
+    <EquipeSection />
+  </ScrollRevealSection>
+  
+  <ScrollRevealSection direction="up" threshold={0.15}>
+    <FinalCTASection />
+  </ScrollRevealSection>
+</Layout> 

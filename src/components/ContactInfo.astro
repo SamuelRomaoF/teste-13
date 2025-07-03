@@ -1,0 +1,19 @@
+---
+const infos = [
+  { icon: '✉️', title: 'E-mail', content: 'suporte@firedominios.com', desc: 'Resposta em até 2 horas' },
+  { icon: '📞', title: 'WhatsApp', content: '(11) 99162-7189', desc: 'Seg à Sex, 9h às 18h' },
+  { icon: '📍', title: 'Localização', content: 'São Paulo, SP', desc: 'Atendimento em todo Brasil' },
+];
+---
+<section class="py-20 bg-white">
+  <div class="container grid gap-8 md:grid-cols-3">
+    {infos.map((info) => (
+      <div class="shadow-lg rounded-xl p-6 hover-lift transition">
+        <div class="w-12 h-12 fire-gradient rounded-full flex items-center justify-center text-white text-xl mb-4">{info.icon}</div>
+        <h3 class="font-semibold font-poppins mb-1">{info.title}</h3>
+        <p class="text-lg font-medium mb-1">{info.content}</p>
+        <p class="text-sm text-gray-600">{info.desc}</p>
+      </div>
+    ))}
+  </div>
+</section> 

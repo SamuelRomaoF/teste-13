@@ -1,0 +1,27 @@
+
+{
+  "name": "Fire Domínios - Agência Digital",
+  "short_name": "Fire Domínios",
+  "description": "Agência digital que transforma negócios com sites e soluções digitais de alta performance",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f54e01",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity"],
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/lovable-uploads/f7ad8c87-e46c-4a74-bbc3-772f8f211c80.webp",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/lovable-uploads/f7ad8c87-e46c-4a74-bbc3-772f8f211c80.webp",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

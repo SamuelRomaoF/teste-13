@@ -1,0 +1,65 @@
+---
+---
+<section class="py-24 bg-gray-50">
+  <div class="container max-w-3xl">
+    <h2 class="text-3xl font-bold font-poppins mb-8 text-center">Solicite seu <span class="fire-text-gradient">Orçamento Gratuito</span></h2>
+    <form id="contactForm" action="mailto:suporte@firedominios.com" method="POST" enctype="text/plain" class="space-y-6 bg-white p-8 shadow-lg rounded-2xl">
+      <div class="grid gap-6 md:grid-cols-2">
+        <input required name="name" placeholder="Nome completo *" class="border p-3 rounded-md w-full" />
+        <input required type="email" name="email" placeholder="E-mail *" class="border p-3 rounded-md w-full" />
+        <input name="phone" placeholder="Telefone" class="border p-3 rounded-md w-full" />
+        <input name="company" placeholder="Empresa" class="border p-3 rounded-md w-full" />
+      </div>
+      <select name="service" class="border p-3 rounded-md w-full">
+        <option value="">Serviço de interesse</option>
+        <option>Landing Page</option><option>Site WordPress</option><option>E-commerce</option><option>Desenvolvimento Personalizado</option><option>Otimização SEO</option><option>Design UI/UX</option><option>Outro</option>
+      </select>
+      <textarea required name="message" rows="6" placeholder="Conte-nos sobre seu projeto *" class="border p-3 rounded-md w-full"></textarea>
+      <button type="submit" class="w-full fire-gradient text-white py-4 rounded-full font-semibold hover:opacity-90 transition">Enviar Proposta →</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Garantir que os links de email funcionem corretamente
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        window.location.href = link.href;
+      });
+    });
+    
+    // Melhorar o envio do formulário
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        // Preparar o assunto e corpo do email
+        const name = form.querySelector('[name="name"]').value;
+        const email = form.querySelector('[name="email"]').value;
+        const phone = form.querySelector('[name="phone"]').value;
+        const company = form.querySelector('[name="company"]').value;
+        const service = form.querySelector('[name="service"]').value;
+        const message = form.querySelector('[name="message"]').value;
+        
+        const subject = `Contato via Site - ${name}`;
+        const body = `
+Nome: ${name}
+Email: ${email}
+Telefone: ${phone || 'Não informado'}
+Empresa: ${company || 'Não informado'}
+Serviço: ${service || 'Não especificado'}
+
+Mensagem:
+${message}
+        `;
+        
+        // Atualizar a URL do mailto com os parâmetros codificados
+        const mailtoUrl = `mailto:suporte@firedominios.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+        
+        e.preventDefault();
+      });
+    }
+  });
+</script> 

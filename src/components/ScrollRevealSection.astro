@@ -1,0 +1,114 @@
+---
+interface Props {
+  as?: string;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'fade';
+  delay?: number;
+  threshold?: number;
+  class?: string;
+  id?: string;
+  once?: boolean;
+}
+
+const { 
+  as: Element = 'div',
+  direction = 'up', 
+  delay = 0, 
+  threshold = 0.1,
+  class: className = '',
+  id,
+  once = false
+} = Astro.props;
+
+// Gerar um ID único se não for fornecido
+const uniqueId = id || `scroll-reveal-${Math.random().toString(36).substring(2, 11)}`;
+---
+
+<Element 
+  id={uniqueId}
+  class:list={[
+    'scroll-reveal-section',
+    `scroll-reveal-${direction}`,
+    className
+  ]}
+  data-delay={delay}
+  data-once={once}
+>
+  <slot />
+</Element>
+
+<script define:vars={{ uniqueId, threshold, once }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const element = document.getElementById(uniqueId);
+    if (!element) return;
+
+    const delay = parseInt(element.dataset.delay || '0', 10);
+    const triggerOnce = element.dataset.once === 'true';
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Adicionar classe quando o elemento entra na viewport
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              element.classList.add('revealed');
+            }, delay);
+            
+            // Se for para revelar apenas uma vez, desconectar o observer
+            if (triggerOnce) {
+              observer.unobserve(element);
+            }
+          } else if (!triggerOnce) {
+            // Remover classe quando o elemento sai da viewport (apenas se !triggerOnce)
+            element.classList.remove('revealed');
+          }
+        });
+      },
+      {
+        threshold: threshold,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    );
+
+    observer.observe(element);
+  });
+</script>
+
+<style>
+  .scroll-reveal-section {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-section.revealed {
+    opacity: 1;
+  }
+
+  .scroll-reveal-up:not(.revealed) {
+    transform: translateY(50px);
+  }
+
+  .scroll-reveal-down:not(.revealed) {
+    transform: translateY(-50px);
+  }
+
+  .scroll-reveal-left:not(.revealed) {
+    transform: translateX(50px);
+  }
+
+  .scroll-reveal-right:not(.revealed) {
+    transform: translateX(-50px);
+  }
+
+  .scroll-reveal-fade:not(.revealed) {
+    transform: scale(0.95);
+  }
+
+  /* Desativar animações para usuários que preferem movimento reduzido */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal-section {
+      transition: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style> 
