@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PlanCard from '../components/PlanCard.astro';
+---
+<Layout title="Planos e Preços | Fire Domínios" description="Conheça os planos e preços da FireDominios para lançar campanhas, estabelecer presença digital, gerar leads e vender online.">
+  <!-- Hero Section -->
+  <header class="relative fire-gradient text-white py-32 overflow-hidden">
+    <div class="absolute inset-0 fire-gradient"></div>
+    <div class="container relative z-10 text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-black font-poppins leading-tight mb-6">Sua Presença Online Profissional, Sem Complicação e Sem Custos Escondidos.</h1>
+      <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto font-light">A FireDominios cuida de toda a tecnologia para você focar no que realmente importa: o seu negócio. Escolha o objetivo e veja o plano ideal.</p>
+      <nav class="flex flex-col md:flex-row gap-4 justify-center text-fire-dark font-semibold" aria-label="Escolha de Objetivo">
+        <a href="#campanha" class="bg-white px-8 py-4 rounded-full flex items-center gap-2 hover:opacity-90 transition"><span>🚀</span> LANÇAR UMA CAMPANHA</a>
+        <a href="#presenca" class="bg-white px-8 py-4 rounded-full flex items-center gap-2 hover:opacity-90 transition"><span>🏢</span> ESTABELECER MINHA PRESENÇA DIGITAL</a>
+        <a href="#leads" class="bg-white px-8 py-4 rounded-full flex items-center gap-2 hover:opacity-90 transition"><span>📈</span> GERAR LEADS E CRESCER</a>
+        <a href="#ecommerce" class="bg-white px-8 py-4 rounded-full flex items-center gap-2 hover:opacity-90 transition"><span>🛒</span> VENDER PRODUTOS ONLINE</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção: LANÇAR UMA CAMPANHA -->
+  <section id="campanha" class="py-24">
+    <div class="container">
+      <h2 class="text-3xl md:text-5xl font-bold text-center mb-2">Páginas de Alta Conversão e Velocidade Máxima para suas Campanhas</h2>
+      <h3 class="text-center text-2xl font-semibold mb-4">⚡ Fire LANDING PAGE (Codada)</h3>
+      <p class="text-center max-w-3xl mx-auto mb-6">Velocidade máxima para campanhas de marketing e a maior taxa de conversão possível.</p>
+      <p class="text-center italic text-gray-600 mb-10">Ideal para: Campanhas de tráfego pago (Google/Meta Ads), "link na bio", lançamento de produtos, validação de ideias de negócio.</p>
+      <div class="max-w-sm mx-auto bg-gray-50 p-10 rounded-2xl shadow-lg text-center">
+        <p class="text-gray-600 mb-1">Taxa de Ativação</p>
+        <p class="text-3xl font-bold mb-4">R$ 347,00</p>
+        <p class="text-gray-600 mb-1">Mensalidade</p>
+        <p class="text-4xl font-extrabold text-fire-primary mb-8">R$ 49,90</p>
+        <a href="/contato" class="bg-fire-dark text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition">Contrate Agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: ESTABELECER MINHA PRESENÇA DIGITAL -->
+  <section id="presenca" class="py-24">
+    <div class="container">
+      <h2 class="text-3xl md:text-5xl font-bold text-center mb-2">Crie sua Presença Online Profissional e Confiável</h2>
+      <p class="text-center mb-12">Escolha a tecnologia que melhor se adapta às suas necessidades:</p>
+
+      <div class="mb-20">
+        <h3 class="text-xl font-semibold text-center mb-8">WordPress – Liberdade para Editar</h3>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <PlanCard icon="✅" title="Fire PRESENÇA (WP One-Page)" description="Liberdade de edição em uma única página" activation="R$ 199,00" monthly="R$ 97,00" />
+          <PlanCard icon="✅" title="Fire PRESENÇA (WP Multi-Página)" description="Presença online completa e editável" activation="R$ 299,00" monthly="R$ 97,00" popular={true} />
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-center mb-8">Codado – Performance Máxima</h3>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <PlanCard icon="⚡" title="Fire PERFORMANCE (Codado)" description="O site institucional mais rápido do mercado" activation="R$ 497,00" monthly="R$ 77,00" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: GERAR LEADS E CRESCER -->
+  <section id="leads" class="py-24">
+    <div class="container">
+      <h2 class="text-3xl md:text-5xl font-bold text-center mb-2">Transforme seu Site em uma Ferramenta de Marketing Poderosa</h2>
+
+      <div class="mb-20">
+        <h3 class="text-xl font-semibold text-center mb-8">WordPress – Liberdade para Editar</h3>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <PlanCard icon="✅" title="Fire CRESCIMENTO (WordPress)" description="Sua plataforma completa de marketing digital" activation="R$ 497,00" monthly="R$ 177,00" />
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-center mb-8">Codado – Performance Máxima</h3>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <PlanCard icon="⚡" title="Fire CRESCIMENTO PRO (Codado)" description="Uma máquina de geração de leads de performance máxima" activation="R$ 897,00" monthly="R$ 157,00" cta="Converse com um Especialista" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: VENDER PRODUTOS ONLINE -->
+  <section id="ecommerce" class="py-24">
+    <div class="container">
+      <h2 class="text-3xl md:text-5xl font-bold text-center mb-2">Comece a Vender Online com Nossas Soluções de E-commerce</h2>
+
+      <div class="mb-20">
+        <h3 class="text-xl font-semibold text-center mb-8">WordPress – Flexibilidade e Gestão Fácil</h3>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <PlanCard icon="✅" title="Fire E-COMMERCE (WordPress)" description="A loja virtual mais completa e com melhor custo-benefício" activation="A partir de R$ 997,00" monthly="A partir de R$ 247,00" cta="Comece a Vender" />
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-center mb-8">Codado – Performance e Escala</h3>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <PlanCard icon="⚡" title="Fire E-COMMERCE PRO (Codado)" description="Performance de nível mundial para grandes operações" activation="Sob Orçamento" monthly="Sob Orçamento" cta="Converse com um Especialista" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: Tranquilidade Inclusa -->
+  <section class="py-24">
+    <div class="container">
+      <h2 class="text-3xl md:text-5xl font-bold text-center mb-12">Tranquilidade Inclusa em Todos os Planos</h2>
+      <ul class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <li class="flex items-center space-x-4 bg-white rounded-xl shadow-lg p-6"><span class="text-3xl">🚀</span><span class="font-medium">Hospedagem de Alta Performance</span></li>
+        <li class="flex items-center space-x-4 bg-white rounded-xl shadow-lg p-6"><span class="text-3xl">🌐</span><span class="font-medium">Domínio Gratuito (1º ano)</span></li>
+        <li class="flex items-center space-x-4 bg-white rounded-xl shadow-lg p-6"><span class="text-3xl">🔒</span><span class="font-medium">Certificado SSL</span></li>
+        <li class="flex items-center space-x-4 bg-white rounded-xl shadow-lg p-6"><span class="text-3xl">🛡️</span><span class="font-medium">Manutenção e Segurança</span></li>
+        <li class="flex items-center space-x-4 bg-white rounded-xl shadow-lg p-6"><span class="text-3xl">💾</span><span class="font-medium">Backups Diários</span></li>
+        <li class="flex items-center space-x-4 bg-white rounded-xl shadow-lg p-6"><span class="text-3xl">📞</span><span class="font-medium">Suporte Técnico Especializado</span></li>
+        <li class="flex items-center space-x-4 bg-white rounded-xl shadow-lg p-6"><span class="text-3xl">✉️</span><span class="font-medium">Contas de E-mail Profissional</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24">
+    <div class="container max-w-4xl">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold font-poppins mb-4">Perguntas <span class="fire-text-gradient">Frequentes</span></h2>
+        <p class="text-lg text-gray-600">Tire suas dúvidas sobre nossos planos e serviços</p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-white shadow-lg rounded-xl p-6 hover-lift transition">
+          <h3 class="font-bold text-lg mb-2 font-poppins">O domínio será meu?</h3>
+          <p class="text-gray-600">Sim, o domínio é registrado em seu nome e você terá total controle sobre ele.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6 hover-lift transition">
+          <h3 class="font-bold text-lg mb-2 font-poppins">Existe contrato de fidelidade?</h3>
+          <p class="text-gray-600">Não, você pode cancelar quando quiser; só pedimos 30 dias de antecedência.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6 hover-lift transition">
+          <h3 class="font-bold text-lg mb-2 font-poppins">Posso mudar de plano?</h3>
+          <p class="text-gray-600">Claro! Basta falar com nosso time e ajustamos o plano às suas necessidades.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6 hover-lift transition">
+          <h3 class="font-bold text-lg mb-2 font-poppins">Qual a diferença entre WordPress e site codado?</h3>
+          <p class="text-gray-600">WordPress oferece liberdade para edição; o site codado maximiza performance e SEO com código feito sob medida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

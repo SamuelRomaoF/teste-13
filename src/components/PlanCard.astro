@@ -1,0 +1,40 @@
+---
+export interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  activation: string;
+  monthly: string;
+  cta?: string;
+  popular?: boolean;
+}
+
+const {
+  icon,
+  title,
+  description,
+  activation,
+  monthly,
+  cta = 'Contrate Agora',
+  popular = false,
+} = Astro.props as Props;
+---
+<article class="relative flex flex-col rounded-3xl shadow-xl bg-white overflow-hidden hover:-translate-y-1 transition-transform">
+  {popular && (
+    <span class="absolute top-3 right-3 bg-fire-primary text-white text-xs font-semibold px-2 py-1 rounded-full">MAIS POPULAR</span>
+  )}
+  <div class="p-8 flex items-center gap-4">
+    <span class="text-3xl">{icon}</span>
+    <h3 class="text-xl font-bold font-poppins">{title}</h3>
+  </div>
+  <div class="px-8 flex-grow">
+    <p class="text-sm text-gray-600 mb-6">{description}</p>
+    <div class="space-y-2 text-sm">
+      <p><span class="font-medium text-gray-600">Taxa de Ativação:</span> <span class="font-bold">{activation}</span></p>
+      <p><span class="font-medium text-gray-600">Mensalidade:</span> <span class="text-2xl font-extrabold text-fire-primary">{monthly}</span></p>
+    </div>
+  </div>
+  <div class="p-8">
+    <a href="/contato" class="block w-full text-center bg-fire-dark text-white py-3 rounded-full font-semibold hover:opacity-95 transition">{cta}</a>
+  </div>
+</article> 
