@@ -41,18 +41,19 @@ import PlanCard from '../components/PlanCard.astro';
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-2">Crie sua Presença Online Profissional e Confiável</h2>
       <p class="text-center mb-12">Escolha a tecnologia que melhor se adapta às suas necessidades:</p>
 
-      <div class="mb-20">
-        <h3 class="text-xl font-semibold text-center mb-8">WordPress – Liberdade para Editar</h3>
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <PlanCard icon="✅" title="Fire PRESENÇA (WP One-Page)" description="Liberdade de edição em uma única página" activation="R$ 199,00" monthly="R$ 97,00" />
-          <PlanCard icon="✅" title="Fire PRESENÇA (WP Multi-Página)" description="Presença online completa e editável" activation="R$ 299,00" monthly="R$ 97,00" popular={true} />
+      <div class="md:flex md:gap-10 justify-center">
+        <div class="mb-8 md:mb-0 md:flex-1">
+          <h3 class="text-xl font-semibold text-center mb-4">WordPress</h3>
+          <div class="flex flex-wrap justify-center gap-8">
+            <PlanCard icon="✅" title="Fire PRESENÇA (WP One-Page)" description="Liberdade para editar em uma única página" activation="R$ 199,00" monthly="R$ 97,00" />
+            <PlanCard icon="✅" title="Fire PRESENÇA (WP Multi-Página)" description="Presença completa e editável" activation="R$ 299,00" monthly="R$ 97,00" popular={true} />
+          </div>
         </div>
-      </div>
-
-      <div>
-        <h3 class="text-xl font-semibold text-center mb-8">Codado – Performance Máxima</h3>
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <PlanCard icon="⚡" title="Fire PERFORMANCE (Codado)" description="O site institucional mais rápido do mercado" activation="R$ 497,00" monthly="R$ 77,00" />
+        <div class="md:flex-1">
+          <h3 class="text-xl font-semibold text-center mb-4 mt-8 md:mt-0">Codado</h3>
+          <div class="flex flex-wrap justify-center gap-8">
+            <PlanCard icon="⚡" title="Fire PERFORMANCE" description="Site institucional de performance máxima" activation="R$ 497,00" monthly="R$ 77,00" />
+          </div>
         </div>
       </div>
     </div>
@@ -63,17 +64,18 @@ import PlanCard from '../components/PlanCard.astro';
     <div class="container">
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-2">Transforme seu Site em uma Ferramenta de Marketing Poderosa</h2>
 
-      <div class="mb-20">
-        <h3 class="text-xl font-semibold text-center mb-8">WordPress – Liberdade para Editar</h3>
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <PlanCard icon="✅" title="Fire CRESCIMENTO (WordPress)" description="Sua plataforma completa de marketing digital" activation="R$ 497,00" monthly="R$ 177,00" />
+      <div class="md:flex md:gap-10 justify-center">
+        <div class="mb-8 md:mb-0 md:flex-1">
+          <h3 class="text-xl font-semibold text-center mb-4">WordPress</h3>
+          <div class="flex flex-wrap justify-center gap-8">
+            <PlanCard icon="✅" title="Fire CRESCIMENTO" description="Plataforma completa de marketing digital" activation="R$ 497,00" monthly="R$ 177,00" />
+          </div>
         </div>
-      </div>
-
-      <div>
-        <h3 class="text-xl font-semibold text-center mb-8">Codado – Performance Máxima</h3>
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <PlanCard icon="⚡" title="Fire CRESCIMENTO PRO (Codado)" description="Uma máquina de geração de leads de performance máxima" activation="R$ 897,00" monthly="R$ 157,00" cta="Converse com um Especialista" />
+        <div class="md:flex-1">
+          <h3 class="text-xl font-semibold text-center mb-4 mt-8 md:mt-0">Codado</h3>
+          <div class="flex flex-wrap justify-center gap-8">
+            <PlanCard icon="⚡" title="Fire CRESCIMENTO PRO" description="Máxima performance de geração de leads" activation="R$ 897,00" monthly="R$ 157,00" cta="Converse com um Especialista" />
+          </div>
         </div>
       </div>
     </div>
@@ -84,17 +86,18 @@ import PlanCard from '../components/PlanCard.astro';
     <div class="container">
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-2">Comece a Vender Online com Nossas Soluções de E-commerce</h2>
 
-      <div class="mb-20">
-        <h3 class="text-xl font-semibold text-center mb-8">WordPress – Flexibilidade e Gestão Fácil</h3>
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <PlanCard icon="✅" title="Fire E-COMMERCE (WordPress)" description="A loja virtual mais completa e com melhor custo-benefício" activation="A partir de R$ 997,00" monthly="A partir de R$ 247,00" cta="Comece a Vender" />
+      <div class="md:flex md:gap-10 justify-center">
+        <div class="mb-8 md:mb-0 md:flex-1">
+          <h3 class="text-xl font-semibold text-center mb-4">WordPress</h3>
+          <div class="flex flex-wrap justify-center gap-8">
+            <PlanCard icon="✅" title="Fire E-COMMERCE" description="Loja virtual completa e custo-benefício imbatível" activation="A partir de R$ 997,00" monthly="A partir de R$ 247,00" cta="Comece a Vender" />
+          </div>
         </div>
-      </div>
-
-      <div>
-        <h3 class="text-xl font-semibold text-center mb-8">Codado – Performance e Escala</h3>
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <PlanCard icon="⚡" title="Fire E-COMMERCE PRO (Codado)" description="Performance de nível mundial para grandes operações" activation="Sob Orçamento" monthly="Sob Orçamento" cta="Converse com um Especialista" />
+        <div class="md:flex-1">
+          <h3 class="text-xl font-semibold text-center mb-4 mt-8 md:mt-0">Codado</h3>
+          <div class="flex flex-wrap justify-center gap-8">
+            <PlanCard icon="⚡" title="Fire E-COMMERCE PRO" description="Performance de nível mundial para grandes operações" activation="Sob Orçamento" monthly="Sob Orçamento" cta="Converse com um Especialista" />
+          </div>
         </div>
       </div>
     </div>
